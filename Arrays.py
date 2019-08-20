@@ -228,11 +228,115 @@ for i in range(1,len(array)):
     if(sum_maximum>current_maximum):
         current_maximum=array[i]
         
+
+
+#Find  the ducpliacte
+a=[0,1,2,3,4,4,5,6,7]
+start_idx=0
+end_idx=len(a)-1
+while(start_idx<end_idx):
+    mid_idx=start_idx+end_idx//2
+    if(mid_idx==a[mid_idx]):
+        start_idx=mid_idx
+    else:
+        end_idx=mid_idx
+        print(a[end_idx])
         
-a=[1,5,2]
-del(max(a))
-
-
-
+        
     
+
+def binary_search(bs_arry,element):
+    start=0
+    end=len(bs_arry)-1
+    mid=(start+end)//2
+    print(mid)
+    while(start<end):
+        print(start,end)
+        if(element<bs_arry[mid]):
+            start=mid+1
+        elif(element==bs_arry[mid]):
+            return mid
+        else:
+            end=mid-1
+            
+bs_arry=[5,6,7,8,9]
+element=9      
+binary_search(bs_arry,element)            
+    
+       
+    
+"""
+#Foundation medicine interview questions
+
+string="I am a very good boy"
+
+Count the number of times each and every character appers and sort them by order
+
+
+SQL Query:
+
+Student:
+Student Id
+Student Name
+Professor Id
+
+Professor:
+Professor Id
+Professor Name
+
+
+SQL Query to find out professor name who mave more than 10 students order by the count of number of students
+
+
+
+
+"""
+
+def count_letters(string):
+    d={}
+    for i in range(0,len(string)):
+        if string[i] not in d:
+            d.update({string[i]:1})
+        else:
+            d[string[i]]+=1
+    d_view=[(v,k) for k,v in d.items()]
+    d_view=sorted(d_view,reverse=True)
+    print(d_view)
+    
+count_letters("i am a very good boy")
+    
+
+
+#Three sum:
+
+nums_triplets=[]
+for i in range(len(nums)):
+    for j in range(i+1,len(nums)):
+        for k in range(j+1,len(nums)):
+            nums_triplets.append([nums[i],nums[j],nums[k]])
+sum_nums_triplets=[]
+        #print(nums_triplets)
+for i in range(len(nums_triplets)):
+   if(sum(nums_triplets[i])==0 and sorted(nums_triplets[i]) not in sum_nums_triplets):
+       sum_nums_triplets.append(sorted(nums_triplets[i]))
+        print(sum_nums_triplets)
+        
+        
+ 
+#Imporvezied in o(n*3)
+       three_sum=[]
+        for i in range(0,len(nums)):
+            for j in range(i+1,len(nums)):
+                for k in range(j+1,len(nums)):
+                    if(sorted([nums[i],nums[j],nums[k]]) not in three_sum and sum([nums[i],nums[j],nums[k]])==0):
+                        three_sum.append(sorted([nums[i],nums[j],nums[k]]))
+        return(three_sum)
+        
+        
+    
+    
+
+
+
+
     
