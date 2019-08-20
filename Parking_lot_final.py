@@ -48,17 +48,6 @@ class ParkingSpace:
         print(self.parking_space)
         return billing.get_payment()
 
-    
-
-
-
-       Movies                             Director
-     MOviesName                            Diectorid
-     MOvie Year                            DietcorDOB
-     MOviesid                              Dietcorgname
-                                           DirectorLanme
-                                           MoveieID
-
 
 
     
